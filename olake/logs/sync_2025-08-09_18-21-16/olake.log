@@ -1,0 +1,77 @@
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"Running sync with state: null"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-08-09T18:21:16Z"}
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"Starting discover for Postgres database source"}
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"Valid selected streams are public.orders"}
+{"level":"warn","time":"2025-08-09T18:21:16Z","message":"aws_region not explicitly provided, will attempt to use region from environment variables or AWS config/credentials file"}
+{"level":"info","message":"AWS credentials not explicitly provided, will use default credential chain (environment variables, AWS config/credentials file, or instance metadata service)","time":"2025-08-09T18:21:16Z"}
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"Iceberg JAR file found in base directory: /home/olake-iceberg-java-writer.jar"}
+{"level":"info","time":"2025-08-09T18:21:16Z","message":"thread id 1: Connected to new iceberg writer on port 50051 for stream check_01K2811K74YJRF4D0VVM749DWD, configHash check_01K2811K74YJRF4D0VVM749DWD-check-false"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:17.707 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Logs will be output to console only","time":"2025-08-09T18:21:17Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:18.079 [main] INFO  org.apache.iceberg.CatalogUtil - Loading custom FileIO implementation: org.apache.iceberg.aws.s3.S3FileIO","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:18.138 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:18.139 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:18.357 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Server started on port 50051 with max message size: 1024MB","time":"2025-08-09T18:21:18Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:19.906 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-24-6498241585764] Parsing messages took: 10 ms","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 18:21:19.930 [grpc-default-executor-0] WARN  io.debezium.server.iceberg.IcebergUtil - Creating table:'olake_iceberg.olake_test_table'","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051] schema:table {","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   1: _olake_id: required string (id)","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   2: _op_type: optional string","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   3: _db: optional string","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   4: _olake_timestamp: optional timestamptz","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051] }","time":"2025-08-09T18:21:19Z"}
+{"level":"info","message":"[Java-Iceberg:50051] rowIdentifier:[_olake_id]","time":"2025-08-09T18:21:19Z"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] 18:21:22.256 [grpc-default-executor-0] ERROR io.debezium.server.iceberg.rpc.OlakeRowsIngester - Failed to create table from debezium event schema: olake_iceberg.olake_test_table Error: Server error: SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long."}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] org.apache.iceberg.exceptions.ServiceFailureException: Server error: SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long."}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$DefaultErrorHandler.accept(ErrorHandlers.java:217) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$TableErrorHandler.accept(ErrorHandlers.java:118) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$TableErrorHandler.accept(ErrorHandlers.java:102) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.throwFailure(HTTPClient.java:211) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:323) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:262) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.post(HTTPClient.java:368) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTClient.post(RESTClient.java:112) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTSessionCatalog$Builder.create(RESTSessionCatalog.java:804) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.IcebergUtil.createIcebergTable(IcebergUtil.java:145) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.lambda$loadIcebergTable$1(OlakeRowsIngester.java:142) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.Optional.orElseGet(Optional.java:364) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.loadIcebergTable(OlakeRowsIngester.java:140) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.sendRecords(OlakeRowsIngester.java:113) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.RecordIngestServiceGrpc$MethodHandlers.invoke(RecordIngestServiceGrpc.java:232) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:356) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:861) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.lang.Thread.run(Thread.java:840) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] 18:21:22.260 [grpc-default-executor-0] ERROR io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-24-6498241585764] Failed to process table events for table: olake_test_table"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] io.debezium.DebeziumException: Failed to create table from debezium event schema: olake_iceberg.olake_test_table Error: Server error: SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long."}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.lambda$loadIcebergTable$1(OlakeRowsIngester.java:146) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.Optional.orElseGet(Optional.java:364) ~[?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.loadIcebergTable(OlakeRowsIngester.java:140) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.OlakeRowsIngester.sendRecords(OlakeRowsIngester.java:113) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.rpc.RecordIngestServiceGrpc$MethodHandlers.invoke(RecordIngestServiceGrpc.java:232) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:356) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:861) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) [olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat java.base/java.lang.Thread.run(Thread.java:840) [?:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] Caused by: org.apache.iceberg.exceptions.ServiceFailureException: Server error: SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long."}
+{"level":"info","time":"2025-08-09T18:21:22Z","message":"thread id 1: shutting down Iceberg server on port 50051"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$DefaultErrorHandler.accept(ErrorHandlers.java:217) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$TableErrorHandler.accept(ErrorHandlers.java:118) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$TableErrorHandler.accept(ErrorHandlers.java:102) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.throwFailure(HTTPClient.java:211) ~[olake-iceberg-java-writer.jar:?]"}
+{"level":"fatal","time":"2025-08-09T18:21:22Z","message":"failed to test destination: error sending record to Iceberg RPC Server: rpc error: code = Internal desc = [Thread-24-6498241585764] Failed to process request: Failed to create table from debezium event schema: olake_iceberg.olake_test_table Error: Server error: SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long."}
+{"level":"error","time":"2025-08-09T18:21:22Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:323) ~[olake-iceberg-java-writer.jar:?]"}

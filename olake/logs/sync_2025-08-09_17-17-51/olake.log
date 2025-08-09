@@ -1,0 +1,2 @@
+{"level":"info","time":"2025-08-09T17:17:51Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"fatal","time":"2025-08-09T17:17:51Z","message":"/mnt/config/streams.json does not exist: stat /mnt/config/streams.json: no such file or directory"}

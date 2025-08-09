@@ -1,0 +1,47 @@
+{"level":"info","time":"2025-08-09T17:25:46Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"info","time":"2025-08-09T17:25:46Z","message":"Running sync with state: null"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-08-09T17:25:46Z"}
+{"level":"info","time":"2025-08-09T17:25:46Z","message":"Starting discover for Postgres database source"}
+{"level":"info","time":"2025-08-09T17:25:47Z","message":"Valid selected streams are public.orders"}
+{"level":"warn","time":"2025-08-09T17:25:47Z","message":"aws_region not explicitly provided, will attempt to use region from environment variables or AWS config/credentials file"}
+{"level":"info","message":"AWS credentials not explicitly provided, will use default credential chain (environment variables, AWS config/credentials file, or instance metadata service)","time":"2025-08-09T17:25:47Z"}
+{"level":"info","time":"2025-08-09T17:25:47Z","message":"Iceberg JAR file found in base directory: /home/olake-iceberg-java-writer.jar"}
+{"level":"info","time":"2025-08-09T17:25:47Z","message":"thread id 1: Connected to new iceberg writer on port 50051 for stream check_01K27XVZTBZH6NSC6P4EDMYRG5, configHash check_01K27XVZTBZH6NSC6P4EDMYRG5-check-false"}
+{"level":"info","message":"[Java-Iceberg:50051] 17:25:48.273 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Logs will be output to console only","time":"2025-08-09T17:25:48Z"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] Exception in thread \"main\" org.apache.iceberg.exceptions.RESTException: Error occurred while processing GET request"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:342)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:262)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.get(HTTPClient.java:358)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTSessionCatalog.fetchConfig(RESTSessionCatalog.java:1045)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTSessionCatalog.initialize(RESTSessionCatalog.java:254)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTCatalog.initialize(RESTCatalog.java:78)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.CatalogUtil.loadCatalog(CatalogUtil.java:274)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.CatalogUtil.buildIcebergCatalog(CatalogUtil.java:328)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.OlakeRpcServer.main(OlakeRpcServer.java:101)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8181 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/sun.nio.ch.Net.pollConnect(Native Method)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat java.base/java.net.Socket.connect(Socket.java:633)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:123)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:305)"}
+{"level":"error","time":"2025-08-09T17:25:48Z","message":"[Java-Iceberg:50051] \t... 8 more"}
+{"level":"info","time":"2025-08-09T17:26:17Z","message":"thread id 1: shutting down Iceberg server on port 50051"}
+{"level":"fatal","time":"2025-08-09T17:26:17Z","message":"failed to test destination: error sending record to Iceberg RPC Server: rpc error: code = DeadlineExceeded desc = latest balancer error: connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\""}

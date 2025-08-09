@@ -1,0 +1,5 @@
+{"level":"info","time":"2025-08-09T19:26:35Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-08-09T19:26:35Z"}
+{"level":"info","time":"2025-08-09T19:26:35Z","message":"Starting discover for Postgres database source"}
+{"level":"info","message":{"type":"CATALOG","catalog":{"selected_streams":{"public":[{"partition_regex":"","stream_name":"orders","normalization":false}]},"streams":[{"stream":{"name":"orders","namespace":"public","type_schema":{"properties":{"amount":{"type":["number_small"]},"customer_id":{"type":["integer_small"]},"order_date":{"type":["timestamp"]},"order_id":{"type":["integer_small"]},"status":{"type":["string"]}}},"supported_sync_modes":["full_refresh"],"source_defined_primary_key":["order_id"],"available_cursor_fields":["order_id","customer_id","order_date","status","amount"],"sync_mode":"full_refresh"}}]}},"time":"2025-08-09T19:26:35Z"}
+{"level":"info","time":"2025-08-09T19:26:35Z","message":"Discover completed, wait 5 seconds cleanup in progress..."}

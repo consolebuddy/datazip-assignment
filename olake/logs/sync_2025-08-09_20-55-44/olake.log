@@ -1,0 +1,76 @@
+{"level":"info","time":"2025-08-09T20:55:44Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"info","time":"2025-08-09T20:55:44Z","message":"Running sync with state: null"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-08-09T20:55:44Z"}
+{"level":"info","time":"2025-08-09T20:55:44Z","message":"Starting discover for Postgres database source"}
+{"level":"info","time":"2025-08-09T20:55:44Z","message":"Valid selected streams are public.orders"}
+{"level":"info","time":"2025-08-09T20:55:45Z","message":"Iceberg JAR file found in base directory: /home/olake-iceberg-java-writer.jar"}
+{"level":"info","time":"2025-08-09T20:55:45Z","message":"thread id 1: Connected to new iceberg writer on port 50051 for stream check_01K289WE5QDPFKA2NAMRCQ31HH, configHash check_01K289WE5QDPFKA2NAMRCQ31HH-check-false"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:45.925 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Logs will be output to console only","time":"2025-08-09T20:55:45Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:46.324 [main] INFO  org.apache.iceberg.CatalogUtil - Loading custom FileIO implementation: org.apache.iceberg.io.ResolvingFileIO","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:46.341 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:46.341 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:46.568 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Server started on port 50051 with max message size: 1024MB","time":"2025-08-09T20:55:46Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:47.722 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15766505173033] Parsing messages took: 12 ms","time":"2025-08-09T20:55:47Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:47.769 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Batch got 1 records with 1 different schema!!","time":"2025-08-09T20:55:47Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:47.782 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Creating new writer for thread: 1","time":"2025-08-09T20:55:47Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:47.792 [grpc-default-executor-0] INFO  org.apache.iceberg.CatalogUtil - Loading custom FileIO implementation: org.apache.iceberg.aws.s3.S3FileIO","time":"2025-08-09T20:55:47Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:48.595 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Successfully wrote 1 events for thread: 1","time":"2025-08-09T20:55:48Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:49.056 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Writer for thread 1 completed with 1 data files and 0 delete files","time":"2025-08-09T20:55:49Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:49.056 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15766505173033] Processing tables took: 1334 ms","time":"2025-08-09T20:55:49Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:49.068 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15766505173033] Total time taken: 1360 ms","time":"2025-08-09T20:55:49Z"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"thread id 1: Server Response: [Thread-23-15766505173033] Received 1 messages"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"thread id 1: shutting down Iceberg server on port 50051"}
+{"level":"info","message":"iceberg destination not support clear destination, skipping clear operation","time":"2025-08-09T20:55:49Z"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"Starting backfill for stream[orders] with 1 chunks"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"Iceberg JAR file found in base directory: /home/olake-iceberg-java-writer.jar"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"thread id 85: Connected to new iceberg writer on port 50051 for stream public.orders, configHash public.orders-public-false"}
+{"level":"info","time":"2025-08-09T20:55:49Z","message":"thread id 85: Sending batch to Iceberg server: 12 records"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:50.134 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Logs will be output to console only","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:50.537 [main] INFO  org.apache.iceberg.CatalogUtil - Loading custom FileIO implementation: org.apache.iceberg.io.ResolvingFileIO","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:50.556 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:50.556 [main] INFO  io.debezium.serde.json.JsonSerdeConfig - JsonSerdeConfig values: ","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tfrom.field = null","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] \tunknown.properties.ignored = false","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] ","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:50.783 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Server started on port 50051 with max message size: 1024MB","time":"2025-08-09T20:55:50Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:52.238 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15771019097311] Parsing messages took: 16 ms","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:52.263 [grpc-default-executor-0] WARN  io.debezium.server.iceberg.IcebergUtil - Creating table:'olake_iceberg.orders'","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] schema:table {","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   1: _olake_id: required string (id)","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   2: data: optional string","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   3: _op_type: optional string","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   4: _db: optional string","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   5: _cdc_timestamp: optional timestamptz","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051]   6: _olake_timestamp: optional timestamptz","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] }","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] rowIdentifier:[_olake_id]","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:52.395 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Batch got 12 records with 1 different schema!!","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:52.403 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Creating new writer for thread: 85","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:52.411 [grpc-default-executor-0] INFO  org.apache.iceberg.CatalogUtil - Loading custom FileIO implementation: org.apache.iceberg.aws.s3.S3FileIO","time":"2025-08-09T20:55:52Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.085 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Successfully wrote 12 events for thread: 85","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.501 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Writer for thread 85 completed with 1 data files and 0 delete files","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.502 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15771019097311] Processing tables took: 1264 ms","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.514 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15771019097311] Total time taken: 1292 ms","time":"2025-08-09T20:55:53Z"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"Sent batch to Iceberg server: 12 records, response: [Thread-23-15771019097311] Received 12 messages"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.524 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15772319947778] Received commit request for thread: 85","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.525 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Committing 1 data files and 0 delete files across 1 WriteResults for thread: 85","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.787 [grpc-default-executor-0] INFO  org.apache.iceberg.SnapshotProducer - Committed snapshot 5560832504688441429 (MergeAppend)","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.933 [grpc-default-executor-0] INFO  org.apache.iceberg.metrics.LoggingMetricsReporter - Received metrics report: CommitReport{tableName=olake_iceberg.olake_iceberg.orders, snapshotId=5560832504688441429, sequenceNumber=1, operation=append, commitMetrics=CommitMetricsResult{totalDuration=TimerResult{timeUnit=NANOSECONDS, totalDuration=PT0.366663726S, count=1}, attempts=CounterResult{unit=COUNT, value=1}, addedDataFiles=CounterResult{unit=COUNT, value=1}, removedDataFiles=null, totalDataFiles=CounterResult{unit=COUNT, value=1}, addedDeleteFiles=null, addedEqualityDeleteFiles=null, addedPositionalDeleteFiles=null, removedDeleteFiles=null, removedEqualityDeleteFiles=null, removedPositionalDeleteFiles=null, totalDeleteFiles=CounterResult{unit=COUNT, value=0}, addedRecords=CounterResult{unit=COUNT, value=12}, removedRecords=null, totalRecords=CounterResult{unit=COUNT, value=12}, addedFilesSizeInBytes=CounterResult{unit=BYTES, value=2621}, removedFilesSizeInBytes=null, totalFilesSizeInBytes=CounterResult{unit=BYTES, value=2621}, addedPositionalDeletes=null, removedPositionalDeletes=null, totalPositionalDeletes=CounterResult{unit=COUNT, value=0}, addedEqualityDeletes=null, removedEqualityDeletes=null, totalEqualityDeletes=CounterResult{unit=COUNT, value=0}}, metadata={iceberg-version=Apache Iceberg 1.7.2 (commit c4e11060db443b0f3e5b70d25e7784f5a8991ad2)}}","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.971 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.tableoperator.IcebergTableOperator - Successfully committed 1 data files and 0 delete files across 1 WriteResults for thread: 85","time":"2025-08-09T20:55:53Z"}
+{"level":"info","message":"[Java-Iceberg:50051] 20:55:53.973 [grpc-default-executor-0] INFO  io.debezium.server.iceberg.rpc.OlakeRowsIngester - [Thread-23-15772319947778] Successfully committed data for thread: 85","time":"2025-08-09T20:55:53Z"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"thread id 85: Sent commit message: [Thread-23-15772319947778] Successfully committed data for thread 85"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"thread id 85: shutting down Iceberg server on port 50051"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"finished chunk min['(0,0)'] and max['(4294967295,0)'] of stream public.orders"}
+{"level":"debug","time":"2025-08-09T20:55:53Z","message":"state is empty"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"Total records read: 12"}
+{"level":"debug","time":"2025-08-09T20:55:53Z","message":"state is empty"}
+{"level":"info","time":"2025-08-09T20:55:53Z","message":"Sync completed, wait 5 seconds cleanup in progress..."}

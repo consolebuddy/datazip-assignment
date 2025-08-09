@@ -1,0 +1,10 @@
+{
+  "host": "pg_src",
+  "port": 5432,
+  "database": "source",
+  "username": "olake",
+  "password": "olake",
+  "ssl": { "mode": "disable" },
+  "reader_batch_size": 100000,
+  "max_threads": 5
+}

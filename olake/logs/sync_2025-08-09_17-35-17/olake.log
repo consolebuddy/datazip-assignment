@@ -1,0 +1,25 @@
+{"level":"info","time":"2025-08-09T17:35:17Z","message":"System has 7GB RAM, setting iceberg writer batch size to 104857600 bytes"}
+{"level":"info","time":"2025-08-09T17:35:17Z","message":"Running sync with state: null"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-08-09T17:35:17Z"}
+{"level":"info","time":"2025-08-09T17:35:17Z","message":"Starting discover for Postgres database source"}
+{"level":"info","time":"2025-08-09T17:35:17Z","message":"Valid selected streams are public.orders"}
+{"level":"warn","time":"2025-08-09T17:35:17Z","message":"aws_region not explicitly provided, will attempt to use region from environment variables or AWS config/credentials file"}
+{"level":"info","message":"AWS credentials not explicitly provided, will use default credential chain (environment variables, AWS config/credentials file, or instance metadata service)","time":"2025-08-09T17:35:17Z"}
+{"level":"info","time":"2025-08-09T17:35:18Z","message":"Iceberg JAR file found in base directory: /home/olake-iceberg-java-writer.jar"}
+{"level":"info","time":"2025-08-09T17:35:18Z","message":"thread id 1: Connected to new iceberg writer on port 50051 for stream check_01K27YDDCMP39CQVSWN2GJ7926, configHash check_01K27YDDCMP39CQVSWN2GJ7926-check-false"}
+{"level":"info","message":"[Java-Iceberg:50051] 17:35:19.186 [main] INFO  io.debezium.server.iceberg.OlakeRpcServer - Logs will be output to console only","time":"2025-08-09T17:35:19Z"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] Exception in thread \"main\" org.apache.iceberg.exceptions.BadRequestException: Malformed request: No route for request: GET catalog/v1/config"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$DefaultErrorHandler.accept(ErrorHandlers.java:208)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.ErrorHandlers$DefaultErrorHandler.accept(ErrorHandlers.java:188)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.throwFailure(HTTPClient.java:211)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:323)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.execute(HTTPClient.java:262)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.HTTPClient.get(HTTPClient.java:358)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTSessionCatalog.fetchConfig(RESTSessionCatalog.java:1045)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTSessionCatalog.initialize(RESTSessionCatalog.java:254)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.rest.RESTCatalog.initialize(RESTCatalog.java:78)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.CatalogUtil.loadCatalog(CatalogUtil.java:274)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat org.apache.iceberg.CatalogUtil.buildIcebergCatalog(CatalogUtil.java:328)"}
+{"level":"error","time":"2025-08-09T17:35:19Z","message":"[Java-Iceberg:50051] \tat io.debezium.server.iceberg.OlakeRpcServer.main(OlakeRpcServer.java:101)"}
+{"level":"info","time":"2025-08-09T17:35:48Z","message":"thread id 1: shutting down Iceberg server on port 50051"}
+{"level":"fatal","time":"2025-08-09T17:35:48Z","message":"failed to test destination: error sending record to Iceberg RPC Server: rpc error: code = DeadlineExceeded desc = latest balancer error: connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\""}
